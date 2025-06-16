@@ -107,11 +107,33 @@
       border-radius: 10px;
     }
 
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      flex: 1;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
     @media (max-width: 600px) {
-      .photo-entry {
+      .photo-entry, .video-entry {
         flex-direction: column;
         align-items: center;
         text-align: center;
+      }
+
+      .video-container {
+        width: 100%;
       }
     }
   </style>
@@ -226,7 +248,47 @@
           </p>
         </div>
       </div>
+      
+      <h2 style="margin-top: 3rem;">Video Reflections</h2>
+    <div class="videos">
+      <div class="video-entry">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                  title="Tutoring Session Video" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+          </iframe>
+        </div>
+        <div class="video-description">
+          <h3>One-on-One Tutoring Recording</h3>
+          <p>
+            This video shows a real-time tutoring session where I helped a student through a difficult algebra problem.
+            It highlights my approach to questioning, scaffolding concepts, and encouraging independent thinking.
+          </p>
+        </div>
+      </div>
 
+      <h2 style="margin-top: 3rem;">Video Reflections</h2>
+    <div class="videos">
+      <div class="video-entry">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                  title="Tutoring Session Video" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+          </iframe>
+        </div>
+        <div class="video-description">
+          <h3>One-on-One Tutoring Recording</h3>
+          <p>
+            This video shows a real-time tutoring session where I helped a student through a difficult algebra problem.
+            It highlights my approach to questioning, scaffolding concepts, and encouraging independent thinking.
+          </p>
+        </div>
+      </div>
+      
     </div>
   </div>
 
